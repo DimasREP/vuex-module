@@ -22,6 +22,7 @@ const auth = {
 
         commit("SET_TOKEN", token);
         console.log("Token saved:", token);
+        
         return true;
       } catch (error) {
         console.error(error);
@@ -41,6 +42,7 @@ const auth = {
   mutations: {
     SET_TOKEN(state, token) {
       state.token = token;
+      state.user = user
     },
   },
 };
